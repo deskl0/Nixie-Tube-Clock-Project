@@ -13,5 +13,5 @@
 
 <p>Those channels control 10 transistors, once triggered, the voltage across the character and anode will up to approx 170v. DONE~ </p>
 <p>
-	<h1>In actual works, only the board which carries control transistors been designed especially and manufactured
+	<h1>In actual works, only the board which carries control transistors been designed especially and manufactured(simply.ewprj)
 </p>
