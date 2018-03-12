@@ -11,4 +11,7 @@
 
 <p> DS3231 is connect to arduino by I2C, once tapsensor gives a &quot;HIGH&quot;, processor get time data from ds3231 process raw data and divide into individual digits. Then ignite nixie tube</p>
 
-<p>Those channels control 10 transistors, voltage cross the character and anode will up to approx 170v. DONE~ </p>
+<p>Those channels control 10 transistors, once triggered, the voltage across the character and anode will up to approx 170v. DONE~ </p>
+<p>
+	<h1>In actual works, only the board which carries control transistors been designed especially and manufactured
+</p>
