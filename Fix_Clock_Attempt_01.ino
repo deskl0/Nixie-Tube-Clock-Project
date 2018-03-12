@@ -1,4 +1,3 @@
-#include <MsTimer2.h>
 #include <DS3231.h>
 #include <Wire.h>
 
@@ -17,7 +16,7 @@ const int Num8 = 10;
 const int Num9 = 11;
 const int Aux = 12;
 const int Latancy = 600;//ms
-const int ShiftCompensation = 50;//ms
+const int ShiftCompensation = 50;//ms actually mistap are rare.
 const int TapSensor = A0;
 int state = LOW;
 unsigned long Prev_Trigger=0;
@@ -47,8 +46,6 @@ void setup()
 	Clock.setDoW(4);
 	Clock.setMonth(03);
 	Clock.setYear(18);*/
-	//analogWrite(A0, 0); //For debug reasons, this line is harmful.
-
 }
 void Display()
 {
@@ -80,7 +77,6 @@ void Display()
 		delay(500);
 	}
 }
-//int Prev_State = LOW;
 int TapListen() {
 	bool taped = false;
 	int Tap_State = digitalRead(TapSensor);
@@ -103,7 +99,6 @@ int TapListen() {
 	if (!taped) {
 		return 0;
 	}
-	//should try analogue input method
 }
 void Adjust() {
 	int adj[4] = {0};
@@ -168,15 +163,6 @@ void DisplayMode() {
 
 void loop()
 {
-	//digitalWrite(13, LOW);
-
-	//Serial.print('\n');
 	DisplayMode();
-	//Serial.println(TapListen());
-	/*Serial.print(Clock.getHour(h12,PM), DEC);
-	Serial.print(':');
-	Serial.print(Clock.getMinute(), DEC);
-	Serial.print(':');
-	Serial.print(Clock.getSecond(), DEC);*/
-	//delay(100);//for serial debug
+	
 }
